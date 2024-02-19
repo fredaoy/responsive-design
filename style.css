@@ -1,0 +1,309 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgb(217, 210, 210);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.logo img {
+  width: 150px;
+  height: 60px;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: #16205f;
+  font-weight: 300;
+}
+
+.menu a:hover,
+.contact a:hover {
+  background: linear-gradient(to right, #ff8c00, #ff0033);
+  -webkit-background-clip: text; /* ใช้ gradient เป็นพื้นหลังของข้อความ */
+  color: transparent; /* ทำให้ข้อความกลายเป็นโปร่งใส */
+  display: inline-block; /* จำเป็นต้องใช้เพื่อให้ background clip ทำงานถูกต้อง*/
+  transition: 0.2s;
+}
+
+.link {
+  display: flex;
+  gap: 30px;
+  /* margin-left: 200px; */
+}
+
+.build a {
+  text-decoration: none;
+  border: 2px solid #16205f;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #16205f;
+  font-weight: 400;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #16205f;
+  /* background: linear-gradient(to right, #ff8c00, #ff0033); */
+  /* -webkit-background-clip: text; ใช้ gradient เป็นพื้นหลังของข้อความ */
+  /* color: transparent; ทำให้ข้อความกลายเป็นโปร่งใส  */
+  /* display: inline-block;  จำเป็นต้องใช้เพื่อให้ background clip ทำงานถูกต้อง  */
+  font-weight: 300;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger {
+  width: 25px;
+  height: 3px;
+  background-color: #16205f;
+  margin: 5px 0;
+}
+
+.content {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.box-radius {
+  margin-top: 90px;
+  transform: translateX(20%); /* จัดตำแหน่งให้ตรงกลาง */
+  width: 440px;
+  height: 350px;
+  background-color: #ffffff;
+  border-radius: 0px 50px 0px 0px;
+}
+
+.header {
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  color: #16205f;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 45px;
+}
+
+.header p {
+  width: 350px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #16205f;
+}
+
+.pic {
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+.pic img {
+  width: 590px;
+  height: 430px;
+}
+
+.btn-build {
+  margin-left: 10px;
+}
+
+.btn-build a {
+  background: linear-gradient(to right, #ff9900, #f2cb00);
+  padding: 8px 15px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  align-items: center;
+}
+
+.flex-3col {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.item1,
+.item2,
+.item3 {
+  display: flex;
+}
+
+.img {
+  background-color: #fff856;
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.img img {
+  width: 40px;
+}
+
+.info-item1 {
+  line-height: 23px;
+  margin-left: 20px;
+  width: 275px;
+}
+
+.info-title {
+  color: #16205f;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.info-desc {
+  color: #16205f;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.slide-bar {
+  display: none;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.slide {
+  width: 25px;
+  height: 3px;
+  background-color: #16205f;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pic img {
+    width: 100%;
+    border-radius: 0px 0px 0px 150px;
+  }
+
+  .pic {
+    order: 1; /* กำหนดลำดับให้เป็นที่หนึ่งเมื่อเข้าสู่โหมด mobile */
+    margin: 0;
+  }
+
+  .box-radius {
+    height: 420px;
+    border-radius: 0;
+    z-index: -1;
+    order: 2; /* กำหนดลำดับให้เป็นที่สองเมื่อเข้าสู่โหมด mobile */
+    margin: 0;
+    margin-left: 50px;
+    /* align-self: center; */
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header p {
+    width: 400px;
+  }
+
+  .btn-build a {
+    width: 100%; /* ทำให้ความกว้างเต็มจอ */
+    box-sizing: border-box; /* จัดการกับ padding หรือ border ที่อาจทำให้เกินขอบจอ */
+  }
+
+  .item2,
+  .item3 {
+    display: none;
+  }
+
+  .flex-3col {
+    margin-top: -100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-bar {
+    margin-top: -25px;
+    display: flex;
+  }
+
+  .flex-3col .item1,
+  .flex-3col .item2,
+  .flex-3col .item3 {
+    display: none;
+  }
+
+  .flex-3col .item1.show,
+  .flex-3col .item2.show,
+  .flex-3col .item3.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .img img {
+    width: 80px;
+  }
+
+  .info-item1 {
+    line-height: 23px;
+    margin-left: 20px;
+    width: 360px;
+    margin: auto;
+  }
+
+  .info-title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .info-desc {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
